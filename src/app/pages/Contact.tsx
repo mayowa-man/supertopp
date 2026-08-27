@@ -87,10 +87,16 @@ export function Contact() {
 
       <main className="overflow-hidden">
         {/* ═══ HERO ═══ */}
-        <section
-          className="relative min-h-[50vh] flex items-center overflow-hidden"
-          style={{ background: 'linear-gradient(135deg, #0B1F35 0%, #003C8F 100%)' }}
-        >
+        <section className="relative min-h-[50vh] flex items-center overflow-hidden bg-[#0B1F35]">
+          <div
+            className="absolute inset-0"
+            style={{
+              backgroundImage: `url(https://images.unsplash.com/photo-1505118380757-91f5f5632de0?w=1600&h=900&fit=crop&auto=format)`,
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+            }}
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#0B1F35]/85 via-[#003C8F]/75 to-[#0a1929]" />
           <div className="absolute inset-0 opacity-20" style={{ backgroundImage: 'radial-gradient(circle at 20% 60%, #4DD0E1 0%, transparent 50%)' }} />
           <div className="relative z-10 max-w-7xl mx-auto px-6 pt-36 pb-16">
             <motion.div initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
@@ -101,7 +107,7 @@ export function Contact() {
               >
                 We'd Love to Hear From You
               </h1>
-              <p className="text-white/55 text-lg max-w-lg">
+              <p className="text-white/65 text-lg max-w-lg">
                 Whether it's your first order or you're building a distribution empire — we're here, fast, and ready.
               </p>
             </motion.div>

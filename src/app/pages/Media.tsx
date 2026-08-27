@@ -51,10 +51,16 @@ export function Media() {
 
       <main className="overflow-hidden">
         {/* ═══ HERO ═══ */}
-        <section
-          className="relative min-h-[50vh] flex items-center overflow-hidden"
-          style={{ background: 'linear-gradient(135deg, #0B1F35 0%, #003C8F 100%)' }}
-        >
+        <section className="relative min-h-[50vh] flex items-center overflow-hidden bg-[#0B1F35]">
+          <div
+            className="absolute inset-0"
+            style={{
+              backgroundImage: `url(https://images.unsplash.com/photo-1518895949257-7621c3c786d7?w=1600&h=900&fit=crop&auto=format)`,
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+            }}
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#0B1F35]/85 via-[#003C8F]/75 to-[#0a1929]" />
           <div className="absolute inset-0 opacity-20">
             <div className="absolute top-0 left-0 w-full h-full" style={{ backgroundImage: 'radial-gradient(circle at 70% 30%, #4DD0E1 0%, transparent 60%)' }} />
           </div>
@@ -67,7 +73,7 @@ export function Media() {
               >
                 Our World in Frame
               </h1>
-              <p className="text-white/55 text-lg max-w-xl">
+              <p className="text-white/65 text-lg max-w-xl">
                 From our purification plants to the communities we serve — a visual story of purity, people, and purpose.
               </p>
             </motion.div>
@@ -83,11 +89,10 @@ export function Media() {
                 <button
                   key={cat}
                   onClick={() => setFilter(cat)}
-                  className={`px-6 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 ${
-                    filter === cat
+                  className={`px-6 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 ${filter === cat
                       ? 'bg-[#4DD0E1] text-[#0B1F35]'
                       : 'border border-white/20 text-white/60 hover:border-[#4DD0E1]/50 hover:text-[#4DD0E1]'
-                  }`}
+                    }`}
                 >
                   {cat}
                 </button>

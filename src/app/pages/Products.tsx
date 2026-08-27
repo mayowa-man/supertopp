@@ -110,11 +110,17 @@ export function Products() {
 
       <main className="overflow-hidden">
         {/* ═══ HERO ═══ */}
-        <section
-          className="relative min-h-[55vh] flex items-center overflow-hidden"
-          style={{ background: 'linear-gradient(135deg, #003C8F 0%, #0B1F35 100%)' }}
-        >
-          <div className="absolute inset-0 opacity-15">
+        <section className="relative min-h-[55vh] flex items-center overflow-hidden bg-[#0B1F35]">
+          <div
+            className="absolute inset-0"
+            style={{
+              backgroundImage: `url(https://images.unsplash.com/photo-1548839140-29a749e1cf4d?w=1600&h=900&fit=crop&auto=format)`,
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+            }}
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#0B1F35]/85 via-[#003C8F]/75 to-[#0a1929]" />
+          <div className="absolute inset-0 opacity-20">
             <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-[#4DD0E1] blur-3xl" />
             <div className="absolute bottom-0 left-0 w-72 h-72 rounded-full bg-[#1565C0] blur-3xl" />
           </div>
@@ -131,7 +137,7 @@ export function Products() {
               >
                 Choose Your Purity
               </h1>
-              <p className="text-white/55 text-lg max-w-xl mx-auto">
+              <p className="text-white/65 text-lg max-w-xl mx-auto">
                 From single-serve to office-ready. Every size, same uncompromising purity.
               </p>
             </motion.div>
