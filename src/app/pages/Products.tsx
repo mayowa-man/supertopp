@@ -190,10 +190,6 @@ export function Products() {
                       {/* Bottle visual */}
                       <div
                         className="relative flex items-end justify-center pt-8 pb-4 px-8"
-                        style={{
-                          animation: `float ${5 + i * 0.4}s ease-in-out infinite`,
-                          animationDelay: `${i * 0.3}s`,
-                        }}
                       >
                         <div className="h-48 w-full flex items-center justify-center rounded-2xl bg-white p-4">
                           <img
