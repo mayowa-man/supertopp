@@ -174,14 +174,17 @@ export function Home() {
         <section
           ref={heroRef}
           className="relative min-h-[90vh] flex items-center overflow-hidden bg-[#0B1F35]"
+          style={{ clipPath: 'inset(0)' }}
         >
-          {/* Full-bleed background photo — uses <img> for reliable iOS/mobile rendering */}
-          <img
-            src={heroBg}
-            alt=""
-            aria-hidden="true"
-            className="absolute inset-0 w-full h-full object-cover"
-          />
+          {/* Fixed background image — clip-path on parent makes this iOS-compatible parallax */}
+          <div className="fixed inset-0 w-full h-full" style={{ zIndex: 0 }}>
+            <img
+              src={heroBg}
+              alt=""
+              aria-hidden="true"
+              className="w-full h-full object-cover"
+            />
+          </div>
 
           {/* Dark gradient overlay for text readability & warm ambiance */}
           <div className="absolute inset-0 bg-gradient-to-b from-[#0B1F35]/85 via-[#0B1F35]/70 to-[#0a1929]/95" />
@@ -305,16 +308,12 @@ export function Home() {
             <ChevronDown className="w-4 h-4" />
           </motion.div>
 
-          {/* Subtle wave transition */}
-          <div className="absolute bottom-0 left-0 right-0 pointer-events-none opacity-90">
-            <svg viewBox="0 0 1440 80" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" className="w-full h-12 lg:h-16">
-              <path d="M0,40 C240,80 480,0 720,40 C960,80 1200,0 1440,40 L1440,80 L0,80 Z" fill="#0a1929" />
-            </svg>
-          </div>
+          {/* Seamless bottom fade into next section */}
+          <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-b from-transparent to-[#0a1929] pointer-events-none" />
         </section>
 
         {/* ═══ STATS ═══ */}
-        <section className="bg-[#0a1929] py-16">
+        <section className="bg-[#0a1929] py-16 -mt-px relative z-[1]">
           <div className="max-w-7xl mx-auto px-6">
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
               {[
