@@ -81,8 +81,8 @@ export function Contact() {
   return (
     <>
       <Helmet>
-        <title>Contact Us — Super Topp Waters</title>
-        <meta name="description" content="Get in touch with Super Topp Waters. Order water, ask about distribution, or reach our team. Purity for Freshness." />
+        <title>Contact Us — SuperTopp</title>
+        <meta name="description" content="Get in touch with SuperTopp. Order water, ask about distribution, or reach our team. Purity for Freshness." />
       </Helmet>
 
       <main className="overflow-hidden">
@@ -328,7 +328,7 @@ export function Contact() {
               </h2>
               <div className="rounded-3xl overflow-hidden border border-white/10 bg-[#0a1929] h-72 lg:h-96 flex items-center justify-center">
                 <iframe
-                  title="SUPER TOPP Location"
+                  title="SuperTopp Location"
                   src="https://maps.google.com/maps?q=Solomon+crescent,+Alagbaka,+Akure+340106,+Ondo,+Nigeria&output=embed"
                   className="w-full h-full border-0"
                   allowFullScreen

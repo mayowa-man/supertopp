@@ -45,8 +45,8 @@ export function Media() {
   return (
     <>
       <Helmet>
-        <title>Media Gallery — Super Topp Waters</title>
-        <meta name="description" content="Explore Super Topp Waters media gallery — production, pure water, community impact, and brand imagery." />
+        <title>Media Gallery — SuperTopp</title>
+        <meta name="description" content="Explore SuperTopp media gallery — production, pure water, community impact, and brand imagery." />
       </Helmet>
 
       <main className="overflow-hidden">

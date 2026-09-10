@@ -52,7 +52,7 @@ export function Footer() {
                   className="text-white font-extrabold text-xl tracking-[0.15em]"
                   style={{ fontFamily: 'Manrope, sans-serif' }}
                 >
-                  SUPER TOPP<span className="text-[#4DD0E1]"> WATERS</span>
+                  SUPER<span className="text-[#4DD0E1]">TOPP</span>
                 </span>
               </div>
             </Link>
@@ -134,7 +134,7 @@ export function Footer() {
       <div className="border-t border-white/8">
         <div className="max-w-7xl mx-auto px-6 py-5 flex flex-col sm:flex-row items-center justify-between gap-3">
           <p className="text-white/40 text-xs font-medium">
-            © {new Date().getFullYear()} Super Topp Waters. Purity for Freshness.
+            © {new Date().getFullYear()} SuperTopp. Purity for Freshness.
           </p>
           <div className="flex gap-5">
             {['Privacy Policy', 'Terms of Service', 'Cookie Policy'].map(item => (

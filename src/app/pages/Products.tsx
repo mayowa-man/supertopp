@@ -92,8 +92,8 @@ export function Products() {
   return (
     <>
       <Helmet>
-        <title>Products — Super Topp Waters</title>
-        <meta name="description" content="Explore Super Topp Waters product range: 75cl bottle, 50cl bottle, 33cl bottle, 19 liters jar, and 50cl sachet. Pure, safe, quality drinking water." />
+        <title>Products — SuperTopp</title>
+        <meta name="description" content="Explore SuperTopp product range: 75cl bottle, 50cl bottle, 33cl bottle, 19 liters jar, and 50cl sachet. Pure, safe, quality drinking water." />
       </Helmet>
 
       <main className="overflow-hidden">
@@ -261,7 +261,7 @@ export function Products() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {[
                 { icon: ShoppingBag, title: 'Corporate Orders', desc: 'Scheduled delivery for offices and institutions. Dedicated account manager included.', cta: 'Get a Quote' },
-                { icon: Award, title: 'Distributor Program', desc: 'Become an authorized SUPER TOPP distributor. Exclusive territories and premium margins.', cta: 'Apply Now' },
+                { icon: Award, title: 'Distributor Program', desc: 'Become an authorized SuperTopp distributor. Exclusive territories and premium margins.', cta: 'Apply Now' },
                 { icon: Droplets, title: 'Dispenser Rental', desc: 'Hot & cold dispensers installed and maintained at no extra cost with 19L subscription.', cta: 'Learn More' },
               ].map((item, i) => (
                 <motion.div

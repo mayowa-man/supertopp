@@ -18,6 +18,7 @@ import dispenser from '../../images/dispenser.webp'
 import sachete from '../../images/sachete.webp'
 import hydration from '../../images/hydration.webp'
 import idea from '../../images/idea.webp'
+import heroBg from '../../images/hero-bg.png'
 import 'swiper/css'
 import 'swiper/css/pagination'
 
@@ -71,7 +72,7 @@ function BottleSVG({ size = '500ml', accent = '#4DD0E1' }: { size?: string; acce
       <rect x="19" y="195" width="62" height="1" fill="rgba(255,255,255,0.25)" />
       {/* label content */}
       <rect x="24" y="96" width="52" height="3" rx="1.5" fill={accent} opacity="0.8" />
-      <text x="50" y="120" textAnchor="middle" fill="white" fontSize="9" fontWeight="800" fontFamily="Manrope,sans-serif" letterSpacing="2">SUPER TOPP</text>
+      <text x="50" y="120" textAnchor="middle" fill="white" fontSize="9" fontWeight="800" fontFamily="Manrope,sans-serif" letterSpacing="2">SUPERTOPP</text>
       <text x="50" y="134" textAnchor="middle" fill={accent} fontSize="6" fontWeight="600" fontFamily="Inter,sans-serif" letterSpacing="1">PURE WATER</text>
       <rect x="28" y="144" width="44" height="1" rx="0.5" fill="rgba(255,255,255,0.15)" />
       <text x="50" y="162" textAnchor="middle" fill="rgba(255,255,255,0.6)" fontSize="8" fontWeight="500" fontFamily="Inter,sans-serif">{size}</text>
@@ -124,28 +125,28 @@ const testimonials = [
     name: 'Sarah Mitchell',
     role: 'Certified Nutritionist',
     avatar: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=80&h=80&fit=crop&auto=format',
-    text: "I've recommended Super Topp Waters to every client. The purity is exceptional — you can taste the fresh difference. My clients feel healthier and energized.",
+    text: "I've recommended SuperTopp Waters to every client. The purity is exceptional — you can taste the fresh difference. My clients feel healthier and energized.",
     stars: 5,
   },
   {
     name: 'James Odhiambo',
     role: 'CEO, NexGen Technologies',
     avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&h=80&fit=crop&auto=format',
-    text: "We switched our entire office to Super Topp Waters 19L jars. The quality is consistent, delivery always on time, and everyone loves the water.",
+    text: "We switched our entire office to SuperTopp Waters 19L jars. The quality is consistent, delivery always on time, and everyone loves the water.",
     stars: 5,
   },
   {
     name: 'Dr. Amara Diallo',
     role: 'Sports Medicine Physician',
     avatar: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=80&h=80&fit=crop&auto=format',
-    text: "As a physician, drinking water safety matters enormously. Super Topp Waters' 6-stage RO process ensures safe, clean hydration.",
+    text: "As a physician, drinking water safety matters enormously. SuperTopp Waters' 6-stage RO process ensures safe, clean hydration.",
     stars: 5,
   },
   {
     name: 'Fatima Al-Hassan',
     role: 'Wellness Studio Owner',
     avatar: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=80&h=80&fit=crop&auto=format',
-    text: "Pure water for a healthier lifestyle. Super Topp Waters delivers on its promise of purity for freshness every single day.",
+    text: "Pure water for a healthier lifestyle. SuperTopp Waters delivers on its promise of purity for freshness every single day.",
     stars: 5,
   },
 ]
@@ -164,76 +165,64 @@ export function Home() {
   return (
     <>
       <Helmet>
-        <title>Super Topp Waters — Purity for Freshness</title>
-        <meta name="description" content="Super Topp Waters - Born from a Need. Driven by Purity. Pure, safe, quality drinking water accessible and affordable to every household." />
+        <title>SuperTopp Waters  Purity for Freshness</title>
+        <meta name="description" content="SuperTopp Born from a Need. Driven by Purity. Pure, safe, quality drinking water accessible and affordable to every household." />
       </Helmet>
 
       <main className="overflow-hidden">
         {/* ═══ HERO ═══ */}
         <section
           ref={heroRef}
-          className="relative min-h-[88vh] flex items-center overflow-hidden"
-          style={{
-            background: 'linear-gradient(-45deg, #003C8F, #0B1F35, #060f1c, #1a3a6b)',
-            backgroundSize: '400% 400%',
-            animation: 'gradientShift 12s ease infinite',
-          }}
+          className="relative min-h-[90vh] flex items-center overflow-hidden bg-[#0B1F35]"
         >
-          <WaterCanvas />
-          {/* Radial glow */}
-          <div className="absolute inset-0 pointer-events-none">
-            <div
-              className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full opacity-20 blur-3xl"
-              style={{ background: 'radial-gradient(circle, #4DD0E1 0%, transparent 70%)' }}
-            />
-            <div
-              className="absolute bottom-1/3 right-1/4 w-72 h-72 rounded-full opacity-15 blur-3xl"
-              style={{ background: 'radial-gradient(circle, #1565C0 0%, transparent 70%)' }}
-            />
-          </div>
+          {/* Full-bleed background photo with fixed attachment for subtle parallax */}
+          <div
+            className="absolute inset-0 bg-no-repeat bg-cover bg-center"
+            style={{
+              backgroundImage: `url(${heroBg})`,
+              backgroundAttachment: 'fixed',
+            }}
+          />
 
-          <div className="max-w-7xl mx-auto px-6 pt-28 pb-14 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-6 items-center relative z-10">
-            {/* Left: text */}
-            <div>
+          {/* Dark gradient overlay for text readability & warm ambiance */}
+          <div className="absolute inset-0 bg-gradient-to-b from-[#0B1F35]/85 via-[#0B1F35]/70 to-[#0a1929]/95" />
+
+          {/* Subtle water canvas effect */}
+          <WaterCanvas className="opacity-30" />
+
+          <div className="max-w-7xl mx-auto px-6 pt-36 pb-20 lg:pt-40 lg:pb-28 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-8 items-center relative z-10">
+            {/* Left: Content block */}
+            <div className="max-w-xl">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
-                className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#4DD0E1]/30 bg-[#4DD0E1]/10 mb-6"
+                className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-white/20 bg-white/10 backdrop-blur-md mb-8"
               >
-                <div className="w-1.5 h-1.5 rounded-full bg-[#4DD0E1] animate-pulse" />
-                <span className="text-[#4DD0E1] text-xs font-semibold tracking-[0.2em] uppercase">
+                <div className="w-1.5 h-1.5 rounded-full bg-[#80DEEA] animate-pulse" />
+                <span className="text-[#80DEEA] text-xs font-semibold tracking-[0.2em] uppercase">
                   Purity for Freshness
                 </span>
               </motion.div>
 
               <motion.h1
-                initial={{ opacity: 0, y: 40 }}
+                initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.15, ease: [0.25, 0.46, 0.45, 0.94] }}
-                className="text-5xl sm:text-6xl lg:text-7xl font-black leading-[1.02] mb-5"
+                className="text-5xl sm:text-6xl lg:text-7xl font-black text-white leading-[1.05] mb-6 tracking-tight"
                 style={{ fontFamily: 'Manrope, sans-serif' }}
               >
-                <span className="text-white">Super Topp</span>
-                <br />
-                <span
-                  style={{
-                    background: 'linear-gradient(135deg, #4DD0E1, #26C6DA, #ffffff)',
-                    WebkitBackgroundClip: 'text',
-                    WebkitTextFillColor: 'transparent',
-                  }}
-                >
-                  Waters
+                SuperTopp
+                <span className="block text-2xl sm:text-3xl font-medium text-[#80DEEA] tracking-normal mt-3">
+                  Purity for Freshness.
                 </span>
-                <br />
-                <span className="text-white">Purity for Freshness.</span>
               </motion.h1>
 
               <motion.p
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 25 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.7, delay: 0.35 }}
-                className="text-white/65 text-base leading-relaxed mb-6 max-w-md"
+                transition={{ duration: 0.7, delay: 0.3 }}
+                className="text-white/75 text-base sm:text-lg leading-relaxed mb-10 max-w-lg"
               >
                 Born from a Need. Driven by Purity. Making pure, safe, quality drinking water accessible and affordable to every household.
               </motion.p>
@@ -241,83 +230,65 @@ export function Home() {
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.5 }}
-                className="flex flex-wrap gap-4"
+                transition={{ duration: 0.6, delay: 0.45 }}
+                className="flex flex-wrap gap-4 mb-12"
               >
                 <Link
                   to="/products"
-                  className="group flex items-center gap-2 px-7 py-3.5 rounded-full font-bold text-[#0B1F35] text-sm transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-[#4DD0E1]/30"
-                  style={{ background: 'linear-gradient(135deg, #4DD0E1, #26C6DA)' }}
+                  className="group flex items-center gap-2 px-8 py-4 rounded-xl font-bold text-[#0B1F35] text-sm bg-gradient-to-r from-[#80DEEA] to-[#26C6DA] shadow-lg shadow-[#80DEEA]/20 hover:-translate-y-1 hover:shadow-xl hover:shadow-[#80DEEA]/30 transition-all duration-300"
                 >
                   Explore Products
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </Link>
                 <Link
                   to="/about"
-                  className="flex items-center gap-2 px-7 py-3.5 rounded-full border border-white/25 text-white text-sm font-semibold hover:border-[#4DD0E1]/60 hover:bg-white/5 transition-all duration-300"
+                  className="flex items-center gap-2 px-8 py-4 rounded-xl border border-white/25 bg-white/5 backdrop-blur-md text-white text-sm font-semibold hover:bg-white/15 hover:border-white/40 hover:-translate-y-1 transition-all duration-300"
                 >
                   Our Story
                 </Link>
               </motion.div>
 
-              {/* Quick stats */}
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.6, delay: 0.75 }}
-                className="flex gap-6 mt-8"
-              >
-                {[
-                  { val: '100%', label: 'Pure & Safe' },
-                  { val: '7', label: 'Purification Stages' },
-                  { val: '100%', label: 'Quality Promise' },
-                ].map(s => (
-                  <div key={s.label}>
-                    <div
-                      className="text-2xl font-black text-white"
-                      style={{ fontFamily: 'Manrope, sans-serif' }}
-                    >
-                      {s.val}
-                    </div>
-                    <div className="text-white/40 text-xs tracking-wide">{s.label}</div>
-                  </div>
-                ))}
-              </motion.div>
+
             </div>
 
-            {/* Right: floating bottle */}
+            {/* Right: Floating bottle visual layer with scroll depth animation */}
             <div className="flex items-center justify-center lg:justify-end">
               <motion.div
-                initial={{ opacity: 0, scale: 0.85, x: 60 }}
-                animate={{ opacity: 1, scale: 1, x: 0 }}
-                transition={{ duration: 1, delay: 0.3, ease: [0.25, 0.46, 0.45, 0.94] }}
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1, y: [0, -12, 0] }}
+                transition={{
+                  opacity: { duration: 0.8, delay: 0.3 },
+                  scale: { duration: 0.8, delay: 0.3 },
+                  y: { duration: 6, repeat: Infinity, ease: 'easeInOut' },
+                }}
                 className="relative"
-                style={{ animation: 'float 5s ease-in-out infinite', animationDelay: '0.5s' }}
               >
-                {/* glow ring */}
+                {/* Soft ambient radial glow */}
                 <div
-                  className="absolute inset-0 rounded-full opacity-30 blur-3xl scale-125"
-                  style={{ background: 'radial-gradient(circle, #4DD0E1, transparent 60%)' }}
+                  className="absolute inset-0 rounded-full opacity-25 blur-3xl scale-125"
+                  style={{ background: 'radial-gradient(circle, #80DEEA, transparent 70%)' }}
                 />
-                <div className="relative w-52 h-80 lg:w-64 lg:h-96 flex items-center justify-center">
+                <div className="relative w-56 h-80 lg:w-72 lg:h-[420px] flex items-center justify-center">
                   <img
                     src={waterSplashIi}
-                    alt="Water Splash"
-                    className="w-full h-full object-contain"
+                    alt="SuperTopp Water Bottle"
+                    className="w-full h-full object-contain filter drop-shadow-2xl"
                   />
                 </div>
-                {/* Floating badge */}
+
+                {/* Frosted Glass Badges */}
                 <motion.div
-                  animate={{ y: [0, -8, 0] }}
-                  transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut', delay: 1 }}
-                  className="absolute -top-4 -right-8 bg-[#4DD0E1] text-[#0B1F35] px-3 py-1.5 rounded-full text-xs font-bold shadow-lg"
+                  animate={{ y: [0, -6, 0] }}
+                  transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut', delay: 0.5 }}
+                  className="absolute -top-2 -right-6 backdrop-blur-md bg-white/10 border border-white/20 text-white/90 px-4 py-2 rounded-full text-xs font-semibold shadow-lg flex items-center gap-1.5"
                 >
-                  ✓ ISO Certified
+                  <span className="text-[#80DEEA]">✓</span> ISO Certified
                 </motion.div>
+
                 <motion.div
-                  animate={{ y: [0, 8, 0] }}
-                  transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
-                  className="absolute bottom-8 -left-10 bg-white/10 backdrop-blur border border-white/20 text-white px-3 py-1.5 rounded-full text-xs font-medium"
+                  animate={{ y: [0, 6, 0] }}
+                  transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut', delay: 1 }}
+                  className="absolute bottom-10 -left-8 backdrop-blur-md bg-white/10 border border-white/20 text-white/90 px-4 py-2 rounded-full text-xs font-semibold shadow-lg"
                 >
                   pH 7.4 Balanced
                 </motion.div>
@@ -325,19 +296,19 @@ export function Home() {
             </div>
           </div>
 
-          {/* Scroll cue */}
+          {/* Scroll Cue */}
           <motion.div
-            animate={{ y: [0, 8, 0] }}
-            transition={{ duration: 2, repeat: Infinity }}
-            className="absolute bottom-8 left-1/2 -translate-x-1/2 text-white/30 flex flex-col items-center gap-2"
+            animate={{ y: [0, 6, 0] }}
+            transition={{ duration: 2.5, repeat: Infinity, ease: 'easeInOut' }}
+            className="absolute bottom-6 left-1/2 -translate-x-1/2 text-white/30 flex flex-col items-center gap-1.5"
           >
-            <span className="text-xs tracking-widest uppercase">Discover</span>
-            <ChevronDown className="w-5 h-5" />
+            <span className="text-[10px] tracking-[0.25em] uppercase font-medium">Scroll</span>
+            <ChevronDown className="w-4 h-4" />
           </motion.div>
 
-          {/* Wave divider */}
-          <div className="absolute bottom-0 left-0 right-0 pointer-events-none">
-            <svg viewBox="0 0 1440 80" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" className="w-full h-16 lg:h-20">
+          {/* Subtle wave transition */}
+          <div className="absolute bottom-0 left-0 right-0 pointer-events-none opacity-90">
+            <svg viewBox="0 0 1440 80" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" className="w-full h-12 lg:h-16">
               <path d="M0,40 C240,80 480,0 720,40 C960,80 1200,0 1440,40 L1440,80 L0,80 Z" fill="#0a1929" />
             </svg>
           </div>
@@ -385,14 +356,14 @@ export function Home() {
               <div className="rounded-3xl overflow-hidden aspect-[4/5] relative bg-[#1565C0]">
                 <img
                   src={hydration}
-                  alt="Hydration by Super Topp Waters"
+                  alt="Hydration by SuperTopp Waters"
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#003C8F]/80 to-transparent" />
                 <div className="absolute bottom-8 left-8 right-8">
                   <div className="bg-white/15 backdrop-blur-md rounded-2xl p-5 border border-white/25">
                     <p className="text-white font-semibold text-sm">"Purity should never be a privilege reserved for a few."</p>
-                    <p className="text-white/70 text-xs mt-1">— Super Topp Waters</p>
+                    <p className="text-white/70 text-xs mt-1">— SuperTopp</p>
                   </div>
                 </div>
               </div>
@@ -403,7 +374,7 @@ export function Home() {
                 className="absolute -top-6 -right-6 bg-[#0B1F35] text-white p-5 rounded-2xl shadow-2xl border border-[#4DD0E1]/20"
               >
                 <Award className="w-6 h-6 text-[#4DD0E1] mb-2" />
-                <div className="text-[#4DD0E1] text-xs font-bold uppercase tracking-wider">Super Topp Waters</div>
+                <div className="text-[#4DD0E1] text-xs font-bold uppercase tracking-wider">SuperTopp</div>
                 <div className="text-white/70 text-xs mt-1">Driven by Purity</div>
               </motion.div>
             </motion.div>
@@ -418,7 +389,7 @@ export function Home() {
                 Driven by Purity.
               </h2>
               <p className="text-[#0B1F35]/70 leading-relaxed mb-5">
-                Every meaningful brand begins with a reason. For Super Topp Waters, that reason was deeply personal — following an unexpected health experience that sparked a profound mission for clean drinking water.
+                Every meaningful brand begins with a reason. For SuperTopp, that reason was deeply personal — following an unexpected health experience that sparked a profound mission for clean drinking water.
               </p>
               <p className="text-[#0B1F35]/70 leading-relaxed mb-8">
                 Our purpose is simple yet profound: to make pure, safe, quality drinking water accessible and affordable to every household. We believe that purity should never be a privilege reserved for a few.
@@ -525,7 +496,7 @@ export function Home() {
                 The 7-Stage Purification Journey
               </h2>
               <p className="text-white/60 mt-4 max-w-xl mx-auto">
-                Every drop of Super Topp Waters passes through seven meticulous stages — each one a scientific guarantee of purity.
+                Every drop of SuperTopp passes through seven meticulous stages — each one a scientific guarantee of purity.
               </p>
             </motion.div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
@@ -601,7 +572,7 @@ export function Home() {
         <section className="bg-[#EAF9FF] py-16 lg:py-20">
           <div className="max-w-7xl mx-auto px-6">
             <motion.div {...fadeUp()} className="text-center mb-10">
-              <span className="text-[#1565C0] text-sm font-bold tracking-[0.25em] uppercase">Why SUPER TOPP</span>
+              <span className="text-[#1565C0] text-sm font-bold tracking-[0.25em] uppercase">Why SuperTopp</span>
               <h2
                 className="text-4xl lg:text-5xl font-black text-[#0B1F35] mt-3"
                 style={{ fontFamily: 'Manrope, sans-serif' }}
@@ -698,7 +669,7 @@ export function Home() {
           />
           <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
             <motion.div {...fadeUp()}>
-              <span className="text-[#4DD0E1] text-sm font-bold tracking-[0.25em] uppercase">Super Topp Waters</span>
+              <span className="text-[#4DD0E1] text-sm font-bold tracking-[0.25em] uppercase">SuperTopp</span>
               <h2
                 className="text-5xl lg:text-6xl font-black text-white mt-4 mb-6 leading-tight"
                 style={{ fontFamily: 'Manrope, sans-serif' }}
@@ -706,7 +677,7 @@ export function Home() {
                 Purity for Freshness
               </h2>
               <p className="text-white/70 text-lg mb-10 max-w-xl mx-auto">
-                Because when it comes to something as fundamental as water, there should be no compromise. Make the switch to Super Topp Waters today.
+                Because when it comes to something as fundamental as water, there should be no compromise. Make the switch to SuperTopp Waters today.
               </p>
               <div className="flex flex-wrap gap-4 justify-center">
                 <Link

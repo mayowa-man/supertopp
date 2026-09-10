@@ -15,7 +15,7 @@ const teamMembers = [
   {
     name: 'Oludayomi Babatunde Johnson',
     role: 'Managing Director (MD)',
-    desc: 'Visionary leader behind Super Topp Waters, driven by a personal commitment to safe and pure drinking water for every home.',
+    desc: 'Visionary leader behind SuperTopp, driven by a personal commitment to safe and pure drinking water for every home.',
   },
   {
     name: 'Oludayomi Fayoke Comfort',
@@ -45,8 +45,8 @@ export function About() {
   return (
     <>
       <Helmet>
-        <title>About Us — Super Topp Waters</title>
-        <meta name="description" content="Born from a Need. Driven by Purity. Discover the story, promise, and leadership of Super Topp Waters." />
+        <title>About Us — SuperTopp</title>
+        <meta name="description" content="Born from a Need. Driven by Purity. Discover the story, promise, and leadership of SuperTopp." />
       </Helmet>
 
       <main className="overflow-hidden">
@@ -77,7 +77,7 @@ export function About() {
                 <span className="text-[#4DD0E1]">Driven by Purity.</span>
               </h1>
               <p className="text-white/70 text-lg sm:text-xl leading-relaxed">
-                Every meaningful brand begins with a reason. For Super Topp Waters, that reason was deeply personal.
+                Every meaningful brand begins with a reason. For SuperTopp, that reason was deeply personal.
               </p>
             </motion.div>
           </div>
@@ -92,7 +92,7 @@ export function About() {
               <div className="rounded-3xl overflow-hidden aspect-[4/5] bg-[#1565C0] shadow-2xl relative">
                 <img
                   src={ceo}
-                  alt="Oludayomi Babatunde Johnson - Director of Super Topp Waters"
+                  alt="Oludayomi Babatunde Johnson - Director of SuperTopp"
                   className="w-full h-full object-cover object-top"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0B1F35] via-transparent to-transparent opacity-80" />
@@ -101,7 +101,7 @@ export function About() {
                   <div className="text-xl font-black" style={{ fontFamily: 'Manrope, sans-serif' }}>
                     Oludayomi Babatunde Johnson
                   </div>
-                  <div className="text-white/70 text-xs mt-1">Super Topp Waters</div>
+                  <div className="text-white/70 text-xs mt-1">SuperTopp</div>
                 </div>
               </div>
             </motion.div>
@@ -135,7 +135,7 @@ export function About() {
               </p>
 
               <p className="text-[#0B1F35]/80 font-semibold text-base lg:text-lg leading-relaxed">
-                After extensive research, exploration, and a clear understanding of the need for dependable, high-quality drinking water, Super Topp Waters was born.
+                After extensive research, exploration, and a clear understanding of the need for dependable, high-quality drinking water, SuperTopp was born.
               </p>
             </motion.div>
           </div>
@@ -153,7 +153,7 @@ export function About() {
                 A Commitment to Well-Being
               </h2>
               <p className="text-white/70 text-lg leading-relaxed">
-                At Super Topp Waters, we understand that water is more than a product. It is an essential part of life, health, family, and everyday well-being.
+                At SuperTopp, we understand that water is more than a product. It is an essential part of life, health, family, and everyday well-being.
               </p>
             </motion.div>
 
@@ -196,7 +196,7 @@ export function About() {
                 PURITY. SAFETY. QUALITY. AFFORDABILITY.
               </h3>
               <p className="text-white/55 text-sm mt-3 max-w-2xl mx-auto">
-                These are more than words to us. They are the principles upon which Super Topp Waters was built.
+                These are more than words to us. They are the principles upon which SuperTopp was built.
               </p>
             </motion.div>
 
@@ -218,7 +218,7 @@ export function About() {
 
             <div className="max-w-3xl mx-auto text-center bg-white/5 p-8 rounded-3xl border border-white/10">
               <p className="text-white/80 leading-relaxed">
-                We continuously invest in our processes, people, and standards to ensure that every drop of Super Topp Waters represents the quality we promise.
+                We continuously invest in our processes, people, and standards to ensure that every drop of SuperTopp represents the quality we promise.
               </p>
               <p className="text-[#4DD0E1] font-bold text-lg mt-4" style={{ fontFamily: 'Manrope, sans-serif' }}>
                 Because when it comes to something as fundamental as water, there should be no compromise.
@@ -239,7 +239,7 @@ export function About() {
                 OUR PROMISE
               </h2>
               <p className="text-[#0B1F35]/70 text-lg max-w-2xl mx-auto">
-                At Super Topp Waters, we are not simply in the business of producing and distributing water. We are in the business of creating confidence.
+                At SuperTopp, we are not simply in the business of producing and distributing water. We are in the business of creating confidence.
               </p>
             </motion.div>
 
@@ -281,7 +281,7 @@ export function About() {
 
               <div className="pt-4">
                 <span className="inline-block bg-gradient-to-r from-[#4DD0E1] to-[#26C6DA] text-[#0B1F35] px-6 py-2.5 rounded-full font-black text-sm tracking-wider uppercase shadow-md">
-                  SUPER TOPP WATERS - Purity for Freshness.
+                  SuperTopp - Purity for Freshness.
                 </span>
               </div>
             </motion.div>
@@ -300,7 +300,7 @@ export function About() {
                 Meet Our Leadership Team
               </h2>
               <p className="text-white/60 max-w-xl mx-auto text-base">
-                Dedicated professionals steering Super Topp Waters toward excellence, safety, and community impact.
+                Dedicated professionals steering SuperTopp toward excellence, safety, and community impact.
               </p>
             </motion.div>
 
@@ -345,7 +345,7 @@ export function About() {
                 Experience Purity for Freshness Today
               </h2>
               <p className="text-white/70 text-base mb-8 max-w-xl mx-auto">
-                Explore our products or contact our team to learn more about how Super Topp Waters can serve your household or organization.
+                Explore our products or contact our team to learn more about how SuperTopp can serve your household or organization.
               </p>
               <div className="flex flex-wrap gap-4 justify-center">
                 <Link

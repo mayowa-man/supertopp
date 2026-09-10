@@ -38,7 +38,7 @@ export function Navbar() {
         <Link to="/" className="flex items-center group" onClick={() => setOpen(false)}>
           <img
             src={superLogo}
-            alt="SUPER TOPP Logo"
+            alt="SuperTopp Logo"
             className="h-9 md:h-10 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
           />
         </Link>
