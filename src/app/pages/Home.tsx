@@ -175,13 +175,12 @@ export function Home() {
           ref={heroRef}
           className="relative min-h-[90vh] flex items-center overflow-hidden bg-[#0B1F35]"
         >
-          {/* Full-bleed background photo with fixed attachment for subtle parallax */}
-          <div
-            className="absolute inset-0 bg-no-repeat bg-cover bg-center"
-            style={{
-              backgroundImage: `url(${heroBg})`,
-              backgroundAttachment: 'fixed',
-            }}
+          {/* Full-bleed background photo — uses <img> for reliable iOS/mobile rendering */}
+          <img
+            src={heroBg}
+            alt=""
+            aria-hidden="true"
+            className="absolute inset-0 w-full h-full object-cover"
           />
 
           {/* Dark gradient overlay for text readability & warm ambiance */}
