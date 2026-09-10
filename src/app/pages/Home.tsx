@@ -11,7 +11,9 @@ import {
 } from 'lucide-react'
 import { WaterCanvas } from '../components/WaterCanvas'
 import waterSplashIi from '../../images/water_splash_ii.webp'
-import bigPack from '../../images/big_pack.webp'
+import bigBottle from '../../images/big_bottle.webp'
+import smallBottle from '../../images/small_bottle.webp'
+import smallPack from '../../images/small_pack.webp'
 import dispenser from '../../images/dispenser.webp'
 import sachete from '../../images/sachete.webp'
 import hydration from '../../images/hydration.webp'
@@ -99,22 +101,22 @@ function PurStep({ n, title, desc, icon: Icon }: { n: number; title: string; des
 }
 
 const purSteps = [
-  { title: 'Source Selection', desc: 'Deep underground aquifers rigorously tested for mineral quality.', icon: Leaf },
-  { title: 'Sediment Filtration', desc: 'Multi-layer filtration removes particles down to 5 microns.', icon: Shield },
-  { title: 'Reverse Osmosis', desc: 'High-pressure membranes eliminate 99.9% of contaminants.', icon: Droplets },
+  { title: 'Source Selection', desc: 'Deep underground aquifers rigorously tested for raw water quality.', icon: Leaf },
+  { title: 'Sediment Filtration', desc: 'Multi-layer filtration removes physical particles down to 5 microns.', icon: Shield },
+  { title: 'Reverse Osmosis', desc: 'High-pressure semi-permeable membranes eliminate 99.9% of contaminants.', icon: Droplets },
+  { title: 'Mineral Balancing', desc: 'Essential minerals balanced at precisely optimal ratios.', icon: CheckCircle2 },
   { title: 'UV Sterilization', desc: 'Ultraviolet light destroys all microbial organisms instantly.', icon: Zap },
-  { title: 'Mineral Balancing', desc: 'Essential minerals reintroduced at precisely optimal ratios.', icon: CheckCircle2 },
-  { title: 'Ozonation', desc: 'Food-grade ozone provides the final disinfection barrier.', icon: Shield },
+  { title: 'Ozonation', desc: 'Food-grade ozone provides the final disinfection barrier.', icon: Sparkles },
   { title: 'Quality Certification', desc: 'Every batch lab-tested before leaving our facility.', icon: Award },
 ]
 
 const benefits = [
   { icon: Shield, title: '100% Pure', desc: 'Zero contaminants — verified by independent lab analysis.' },
-  { icon: Droplets, title: 'pH Balanced', desc: 'Optimal 7.2–7.8 pH for maximum absorption and health.' },
-  { icon: CheckCircle2, title: 'Essential Minerals', desc: 'Calcium, magnesium, and potassium restored naturally.' },
+  { icon: Droplets, title: 'Advanced RO Filtration', desc: 'Purified through 6-stage Reverse Osmosis system.' },
+  { icon: CheckCircle2, title: 'Purity & Safety', desc: 'Consistently safe water worthy of your family\'s trust.' },
   { icon: Leaf, title: 'BPA-Free Packaging', desc: 'Food-grade materials safe for you and the planet.' },
-  { icon: Zap, title: 'Cold Chain Assured', desc: 'Temperature-controlled logistics from plant to door.' },
-  { icon: Award, title: 'ISO 22000 Certified', desc: 'Meeting the highest international food safety standards.' },
+  { icon: Zap, title: 'Quality Controlled', desc: 'Rigorous quality controls from treatment to delivery.' },
+  { icon: Award, title: 'Hygienically Sealed', desc: 'Meeting the highest standards of safety and quality.' },
 ]
 
 const testimonials = [
@@ -122,36 +124,38 @@ const testimonials = [
     name: 'Sarah Mitchell',
     role: 'Certified Nutritionist',
     avatar: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=80&h=80&fit=crop&auto=format',
-    text: "I've recommended SUPER TOPP to every client. The mineral balance is exceptional — you can literally taste the quality difference. My clients notice clearer skin and more energy within weeks.",
+    text: "I've recommended Super Topp Waters to every client. The purity is exceptional — you can taste the fresh difference. My clients feel healthier and energized.",
     stars: 5,
   },
   {
     name: 'James Odhiambo',
     role: 'CEO, NexGen Technologies',
     avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&h=80&fit=crop&auto=format',
-    text: "We switched our entire office of 200 people to SUPER TOPP dispenser units. The service is impeccable, delivery always on time, and everyone loves the taste. Worth every penny.",
+    text: "We switched our entire office to Super Topp Waters 19L jars. The quality is consistent, delivery always on time, and everyone loves the water.",
     stars: 5,
   },
   {
     name: 'Dr. Amara Diallo',
     role: 'Sports Medicine Physician',
     avatar: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=80&h=80&fit=crop&auto=format',
-    text: "As an athlete and doctor, hydration quality matters enormously. SUPER TOPP's pH balance and mineral profile are scientifically optimal for performance and recovery. My team drinks nothing else.",
+    text: "As a physician, drinking water safety matters enormously. Super Topp Waters' 6-stage RO process ensures safe, clean hydration.",
     stars: 5,
   },
   {
     name: 'Fatima Al-Hassan',
     role: 'Wellness Studio Owner',
     avatar: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=80&h=80&fit=crop&auto=format',
-    text: "Premium water for a premium experience. My yoga and wellness studio switched to SUPER TOPP six months ago — the feedback from members has been overwhelmingly positive. It's part of our brand identity now.",
+    text: "Pure water for a healthier lifestyle. Super Topp Waters delivers on its promise of purity for freshness every single day.",
     stars: 5,
   },
 ]
 
 const products = [
-  { size: '50cl', label: 'Super Topp Bottle Pack', accent: '#4DD0E1', image: bigPack },
-  { size: '19L', label: 'Super Topp Dispenser Refill', accent: '#26C6DA', image: dispenser },
-  { size: '50cl', label: 'Super Topp Sachet Bag', accent: '#00BCD4', image: sachete },
+  { size: '75cl', label: '75cl Bottle', accent: '#4DD0E1', image: bigBottle },
+  { size: '50cl', label: '50cl Bottle', accent: '#26C6DA', image: smallBottle },
+  { size: '33cl', label: '33cl Bottle', accent: '#00BCD4', image: smallPack },
+  { size: '19 Liters', label: '19 Liters Jar', accent: '#1565C0', image: dispenser },
+  { size: '50cl', label: '50cl Sachet', accent: '#4DD0E1', image: sachete },
 ]
 
 export function Home() {
@@ -160,8 +164,8 @@ export function Home() {
   return (
     <>
       <Helmet>
-        <title>SUPER TOPP — purity for freshness</title>
-        <meta name="description" content="Experience purity perfected. SUPER TOPP delivers scientifically filtered, mineral-balanced water for a healthier, more vibrant life." />
+        <title>Super Topp Waters — Purity for Freshness</title>
+        <meta name="description" content="Super Topp Waters - Born from a Need. Driven by Purity. Pure, safe, quality drinking water accessible and affordable to every household." />
       </Helmet>
 
       <main className="overflow-hidden">
@@ -219,19 +223,19 @@ export function Home() {
                     WebkitTextFillColor: 'transparent',
                   }}
                 >
-                  Pure
+                  Waters
                 </span>
                 <br />
-                <span className="text-white">Excellence.</span>
+                <span className="text-white">Purity for Freshness.</span>
               </motion.h1>
 
               <motion.p
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.7, delay: 0.35 }}
-                className="text-white/55 text-base leading-relaxed mb-6 max-w-md"
+                className="text-white/65 text-base leading-relaxed mb-6 max-w-md"
               >
-                Nature's finest, perfected through seven stages of scientific purification. Experience the difference true purity makes.
+                Born from a Need. Driven by Purity. Making pure, safe, quality drinking water accessible and affordable to every household.
               </motion.p>
 
               <motion.div
@@ -264,9 +268,9 @@ export function Home() {
                 className="flex gap-6 mt-8"
               >
                 {[
-                  { val: '100%', label: 'Pure' },
-                  { val: '7+', label: 'Filter Stages' },
-                  { val: '5M+', label: 'Happy Customers' },
+                  { val: '100%', label: 'Pure & Safe' },
+                  { val: '7', label: 'Purification Stages' },
+                  { val: '100%', label: 'Quality Promise' },
                 ].map(s => (
                   <div key={s.label}>
                     <div
@@ -344,10 +348,10 @@ export function Home() {
           <div className="max-w-7xl mx-auto px-6">
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
               {[
-                { end: 100, suffix: '%', label: 'Contaminant-Free', prefix: '' },
-                { end: 7, suffix: '+', label: 'Filtration Stages', prefix: '' },
-                { end: 5, suffix: 'M+', label: 'Bottles Delivered', prefix: '' },
-                { end: 50, suffix: '+', label: 'Cities Covered', prefix: '' },
+                { end: 100, suffix: '%', label: 'Purity Standard', prefix: '' },
+                { end: 7, suffix: '', label: 'Purification Stages', prefix: '' },
+                { end: 100, suffix: '%', label: 'Safety & Quality', prefix: '' },
+                { end: 100, suffix: '%', label: 'Family Commitment', prefix: '' },
               ].map((stat, i) => (
                 <motion.div
                   key={stat.label}
@@ -381,14 +385,14 @@ export function Home() {
               <div className="rounded-3xl overflow-hidden aspect-[4/5] relative bg-[#1565C0]">
                 <img
                   src={hydration}
-                  alt="Hydration by SUPER TOPP"
+                  alt="Hydration by Super Topp Waters"
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#003C8F]/80 to-transparent" />
                 <div className="absolute bottom-8 left-8 right-8">
                   <div className="bg-white/15 backdrop-blur-md rounded-2xl p-5 border border-white/25">
-                    <p className="text-white font-semibold text-sm">"Water is the driving force of all nature."</p>
-                    <p className="text-white/60 text-xs mt-1">— Leonardo da Vinci</p>
+                    <p className="text-white font-semibold text-sm">"Purity should never be a privilege reserved for a few."</p>
+                    <p className="text-white/70 text-xs mt-1">— Super Topp Waters</p>
                   </div>
                 </div>
               </div>
@@ -399,35 +403,36 @@ export function Home() {
                 className="absolute -top-6 -right-6 bg-[#0B1F35] text-white p-5 rounded-2xl shadow-2xl border border-[#4DD0E1]/20"
               >
                 <Award className="w-6 h-6 text-[#4DD0E1] mb-2" />
-                <div className="text-2xl font-black" style={{ fontFamily: 'Manrope, sans-serif' }}>2015</div>
-                <div className="text-white/50 text-xs">Founded</div>
+                <div className="text-[#4DD0E1] text-xs font-bold uppercase tracking-wider">Super Topp Waters</div>
+                <div className="text-white/70 text-xs mt-1">Driven by Purity</div>
               </motion.div>
             </motion.div>
 
             <motion.div {...fadeUp(0.15)}>
               <span className="text-[#1565C0] text-sm font-bold tracking-[0.25em] uppercase">Our Story</span>
               <h2
-                className="text-5xl lg:text-6xl font-black text-[#0B1F35] mt-3 mb-6 leading-tight"
+                className="text-4xl lg:text-5xl font-black text-[#0B1F35] mt-3 mb-6 leading-tight"
                 style={{ fontFamily: 'Manrope, sans-serif' }}
               >
-                Born From a Belief in Pure Living
+                Born from a Need. <br />
+                Driven by Purity.
               </h2>
-              <p className="text-[#0B1F35]/65 leading-relaxed mb-5">
-                SUPER TOPP was founded on a simple, profound conviction: that every person deserves access to water in its most perfect form. Not just clean water — <em>pure</em> water.
+              <p className="text-[#0B1F35]/70 leading-relaxed mb-5">
+                Every meaningful brand begins with a reason. For Super Topp Waters, that reason was deeply personal — following an unexpected health experience that sparked a profound mission for clean drinking water.
               </p>
-              <p className="text-[#0B1F35]/65 leading-relaxed mb-8">
-                We built our purification process from the ground up, drawing on hydrological science, food engineering, and an obsessive commitment to quality. Today, our seven-stage process sets the benchmark for premium purified water across the continent.
+              <p className="text-[#0B1F35]/70 leading-relaxed mb-8">
+                Our purpose is simple yet profound: to make pure, safe, quality drinking water accessible and affordable to every household. We believe that purity should never be a privilege reserved for a few.
               </p>
               <div className="grid grid-cols-2 gap-4 mb-8">
                 {[
-                  'ISO 22000 Certified',
-                  'NSF/ANSI 61 Compliant',
-                  'FDA Approved Facility',
-                  'Zero Detected Pathogens',
+                  '100% Pure Water',
+                  '7-Stage Purification',
+                  'Reverse Osmosis (Stage 4)',
+                  'Mineral Balancing (Stage 5)',
                 ].map(item => (
                   <div key={item} className="flex items-center gap-2">
                     <CheckCircle2 className="w-4 h-4 text-[#1565C0] flex-shrink-0" />
-                    <span className="text-[#0B1F35]/70 text-sm">{item}</span>
+                    <span className="text-[#0B1F35]/70 text-sm font-medium">{item}</span>
                   </div>
                 ))}
               </div>
@@ -519,8 +524,8 @@ export function Home() {
               >
                 The 7-Stage Purification Journey
               </h2>
-              <p className="text-white/45 mt-4 max-w-xl mx-auto">
-                Every drop of SUPER TOPP passes through seven meticulous stages — each one a scientific guarantee of purity.
+              <p className="text-white/60 mt-4 max-w-xl mx-auto">
+                Every drop of Super Topp Waters passes through seven meticulous stages — each one a scientific guarantee of purity.
               </p>
             </motion.div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
@@ -693,31 +698,29 @@ export function Home() {
           />
           <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
             <motion.div {...fadeUp()}>
-              <span className="text-[#4DD0E1] text-sm font-bold tracking-[0.25em] uppercase">Start Today</span>
+              <span className="text-[#4DD0E1] text-sm font-bold tracking-[0.25em] uppercase">Super Topp Waters</span>
               <h2
                 className="text-5xl lg:text-6xl font-black text-white mt-4 mb-6 leading-tight"
                 style={{ fontFamily: 'Manrope, sans-serif' }}
               >
-                Make the Switch to Pure
+                Purity for Freshness
               </h2>
-              <p className="text-white/60 text-lg mb-10 max-w-xl mx-auto">
-                Join over 5 million people who have chosen SUPER TOPP for a healthier, more vibrant life.
+              <p className="text-white/70 text-lg mb-10 max-w-xl mx-auto">
+                Because when it comes to something as fundamental as water, there should be no compromise. Make the switch to Super Topp Waters today.
               </p>
               <div className="flex flex-wrap gap-4 justify-center">
                 <Link
                   to="/products"
-                  className="px-8 py-4 rounded-full bg-white text-[#003C8F] font-bold text-sm hover:bg-[#4DD0E1] transition-all duration-300 hover:scale-105"
+                  className="px-8 py-4 rounded-full bg-[#4DD0E1] text-[#0B1F35] font-bold text-sm hover:bg-white transition-all duration-300 hover:scale-105"
                 >
-                  Shop Now
+                  Explore Products
                 </Link>
-                <a
-                  href="https://wa.me/12345678900"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <Link
+                  to="/about"
                   className="flex items-center gap-2 px-8 py-4 rounded-full border border-white/30 text-white font-semibold text-sm hover:border-[#4DD0E1] hover:bg-white/10 transition-all duration-300"
                 >
-                  <Phone className="w-4 h-4" /> Call Us
-                </a>
+                  Our Story & Promise
+                </Link>
               </div>
             </motion.div>
           </div>

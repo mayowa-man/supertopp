@@ -29,70 +29,58 @@ interface Product {
 
 const products: Product[] = [
   {
-    id: 'sachet',
-    size: '50cl',
-    label: 'Super Topp Sachet Bag',
-    category: 'Packs',
-    features: ['Eco-friendly sachet', '100% purified water', 'pH balanced', 'Affordable hydration'],
-    bestFor: 'Daily budget hydration, events',
-    tag: '',
-    image: sachete,
-  },
-  {
-    id: 'small_bottle',
-    size: '500ml',
-    label: 'Mini Pure',
+    id: 'bottle_75cl',
+    size: '75cl',
+    label: '75cl Bottle',
     category: 'Bottles',
-    features: ['Travel-friendly', 'BPA-Free PET', 'pH 7.4 balanced', '100% purified'],
-    bestFor: 'Kids, travel, events',
-    tag: '',
-    image: smallBottle,
-  },
-  {
-    id: 'big_pack',
-    size: '10L',
-    label: 'Value Pack',
-    category: 'Packs',
-    features: ['Carry handle', 'Easy-pour spout', 'BPA-Free HDPE', 'Great value'],
-    bestFor: 'Offices, schools, events',
-    tag: 'Best Value',
-    image: bigPack,
-  },
-  {
-    id: 'big_bottle',
-    size: '1.5L',
-    label: 'Pure Plus',
-    category: 'Bottles',
-    features: ['Family size', 'Ergonomic grip', 'BPA-Free PET', 'pH balanced'],
-    bestFor: 'Family meals, outdoor',
-    tag: '',
+    features: ['Premium ergonomic bottle', '100% purified water', 'BPA-Free PET packaging', 'Perfect for daily hydration'],
+    bestFor: 'Workouts, meals, daily hydration',
+    tag: 'Popular',
     image: bigBottle,
   },
   {
-    id: 'small_pack',
-    size: '5L',
-    label: 'Family Pack',
-    category: 'Packs',
-    features: ['Sturdy handle', 'Reclosable spout', 'BPA-Free HDPE', 'Multi-day supply'],
-    bestFor: 'Families, meal prep',
-    tag: '',
+    id: 'bottle_50cl',
+    size: '50cl',
+    label: '50cl Bottle',
+    category: 'Bottles',
+    features: ['Travel-friendly size', 'BPA-Free PET bottle', 'Handy & refreshing', '100% purified water'],
+    bestFor: 'On-the-go, travel, meetings',
+    tag: 'Handy',
+    image: smallBottle,
+  },
+  {
+    id: 'bottle_33cl',
+    size: '33cl',
+    label: '33cl Bottle',
+    category: 'Bottles',
+    features: ['Compact & lightweight', 'Child-friendly size', 'BPA-Free PET', 'Purity in every drop'],
+    bestFor: 'Kids, events, parties',
+    tag: 'Mini',
     image: smallPack,
   },
   {
-    id: 'dispenser',
-    size: '19L',
-    label: 'Dispenser',
-    category: 'Dispenser',
-    features: ['Dispenser compatible', 'Sealed hygiene cap', 'Weekly delivery available', 'Cold chain assured'],
-    bestFor: 'Offices, homes, restaurants',
-    tag: 'Premium',
+    id: 'jar_19l',
+    size: '19 Liters',
+    label: '19 Liters Jar',
+    category: 'Jar',
+    features: ['High-capacity jar', 'Dispenser compatible', 'Sealed tamper-proof cap', 'Cost-effective for families & offices'],
+    bestFor: 'Homes, offices, schools & corporate',
+    tag: 'Best Value',
     image: dispenser,
+  },
+  {
+    id: 'sachet_50cl',
+    size: '50cl',
+    label: '50cl Sachet',
+    category: 'Sachet',
+    features: ['Hygienically sealed sachet', '100% pure drinking water', 'Ultra-affordable hydration', 'Convenient pack'],
+    bestFor: 'Everyday affordable hydration, events',
+    tag: 'Budget Friendly',
+    image: sachete,
   },
 ]
 
-const categories = ['All', 'Bottles', 'Packs', 'Dispenser']
-
-
+const categories = ['All', 'Bottles', 'Jar', 'Sachet']
 
 export function Products() {
   const [activeCategory, setActiveCategory] = useState('All')
@@ -104,8 +92,8 @@ export function Products() {
   return (
     <>
       <Helmet>
-        <title>Products — SUPER TOPP Premium Water</title>
-        <meta name="description" content="Shop SUPER TOPP purified water. Available in 330ml, 500ml, 1L, 1.5L, 5L, 10L and 19L dispenser sizes. Order online or via WhatsApp." />
+        <title>Products — Super Topp Waters</title>
+        <meta name="description" content="Explore Super Topp Waters product range: 75cl bottle, 50cl bottle, 33cl bottle, 19 liters jar, and 50cl sachet. Pure, safe, quality drinking water." />
       </Helmet>
 
       <main className="overflow-hidden">

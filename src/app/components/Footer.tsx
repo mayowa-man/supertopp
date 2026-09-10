@@ -3,18 +3,18 @@ import { Droplets, Mail, Phone, MapPin, Facebook, Instagram, Twitter, Youtube } 
 
 const footerLinks = {
   Company: [
-    { label: 'About Us', to: '/about' },
-    { label: 'Our Mission', to: '/about' },
-    { label: 'Certifications', to: '/about' },
-    { label: 'Media', to: '/media' },
-    { label: 'Contact', to: '/contact' },
+    { label: 'About Us & Story', to: '/about' },
+    { label: 'Our Promise', to: '/about' },
+    { label: 'Leadership & Team', to: '/about' },
+    { label: 'Media Gallery', to: '/media' },
+    { label: 'Contact Us', to: '/contact' },
   ],
   Products: [
-    { label: '330ml Bottle', to: '/products' },
-    { label: '500ml Bottle', to: '/products' },
-    { label: '1.5L Bottle', to: '/products' },
-    { label: '5L Pack', to: '/products' },
-    { label: '19L Dispenser', to: '/products' },
+    { label: '75cl Bottle', to: '/products' },
+    { label: '50cl Bottle', to: '/products' },
+    { label: '33cl Bottle', to: '/products' },
+    { label: '19 Liters Jar', to: '/products' },
+    { label: '50cl Sachet', to: '/products' },
   ],
   Support: [
     { label: 'Order Tracking', to: '/contact' },
@@ -32,7 +32,7 @@ const socials = [
   { icon: Youtube, href: '#', label: 'YouTube' },
 ]
 
-const certBadges = ['ISO 22000', 'NSF/ANSI 61', 'FDA Approved', 'BPA-Free', 'Halal Certified']
+const certBadges = ['Purity Guaranteed', 'Safety First', '7-Stage Purification', 'Reverse Osmosis (Stage 4)', 'Mineral Balancing (Stage 5)', 'Affordable Hydration']
 
 export function Footer() {
   return (
@@ -49,15 +49,15 @@ export function Footer() {
               </div>
               <div>
                 <span
-                  className="text-white font-extrabold text-xl tracking-[0.2em]"
+                  className="text-white font-extrabold text-xl tracking-[0.15em]"
                   style={{ fontFamily: 'Manrope, sans-serif' }}
                 >
-                  SUPER<span className="text-[#4DD0E1]"> TOPP</span>
+                  SUPER TOPP<span className="text-[#4DD0E1]"> WATERS</span>
                 </span>
               </div>
             </Link>
-            <p className="text-white/50 text-sm leading-relaxed mb-6 max-w-xs">
-              Nature's finest, perfected. Pure water for a healthier life — scientifically filtered, mineral-balanced, and delivered to your door.
+            <p className="text-white/60 text-sm leading-relaxed mb-6 max-w-xs">
+              Born from a Need. Driven by Purity. Pure, safe, quality drinking water accessible and affordable to every household.
             </p>
             {/* Contact info */}
             <div className="space-y-3">
@@ -133,8 +133,8 @@ export function Footer() {
       {/* Bottom bar */}
       <div className="border-t border-white/8">
         <div className="max-w-7xl mx-auto px-6 py-5 flex flex-col sm:flex-row items-center justify-between gap-3">
-          <p className="text-white/30 text-xs">
-            © {new Date().getFullYear()} SUPER TOPP. All rights reserved.
+          <p className="text-white/40 text-xs font-medium">
+            © {new Date().getFullYear()} Super Topp Waters. Purity for Freshness.
           </p>
           <div className="flex gap-5">
             {['Privacy Policy', 'Terms of Service', 'Cookie Policy'].map(item => (

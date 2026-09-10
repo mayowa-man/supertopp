@@ -81,8 +81,8 @@ export function Contact() {
   return (
     <>
       <Helmet>
-        <title>Contact — SUPER TOPP Premium Water</title>
-        <meta name="description" content="Get in touch with SUPER TOPP. Order water, ask about distribution, or reach our team. We respond within 30 minutes during business hours." />
+        <title>Contact Us — Super Topp Waters</title>
+        <meta name="description" content="Get in touch with Super Topp Waters. Order water, ask about distribution, or reach our team. Purity for Freshness." />
       </Helmet>
 
       <main className="overflow-hidden">
