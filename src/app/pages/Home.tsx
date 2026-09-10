@@ -496,7 +496,7 @@ export function Home() {
                 The 7-Stage Purification Journey
               </h2>
               <p className="text-white/60 mt-4 max-w-xl mx-auto">
-                Every drop of SuperTopp passes through seven meticulous stages — each one a scientific guarantee of purity.
+                Every drop of SuperTopp passes through seven meticulous stages, each one a scientific guarantee of purity.
               </p>
             </motion.div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
